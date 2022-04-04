@@ -3,7 +3,6 @@ library(dplyr)
 
 #Import database
 setwd("C:/Users/jessica/OneDrive - University of Bath/Bioinformatics/Sam/Assessment 2/")
-#d<- fread("ALL.csv")
 df<-read.csv(file = "Gram negative Oxidase positive AMR.csv")
 df<-as.data.frame(df)
 df2<-df[,c(18:34)] #isolate AMR groups
