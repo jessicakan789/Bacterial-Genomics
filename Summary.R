@@ -17,8 +17,8 @@ Burkholderia_pseudomallei <- colSums(df2[c(1408:2250),]) #select the rows with B
 #Bordetella
 Bordetella <- colSums(df2[c(2251:4335),]) #select the rows with Bordetella
 
-#Borellia
-Borellia <- colSums(df2[c(4336:4439),]) #select the rows with Borellia
+#Borrelia
+Borrelia <- colSums(df2[c(4336:4439),]) #select the rows with Borrelia
 
 #Brucella
 Brucella <- colSums(df2[c(4440:4547),]) #select the rows with Brucella
@@ -47,8 +47,8 @@ Neisseria <- colSums(df2[c(9750:51085),]) #select the rows with Neisseria
 #Pseudomonas aeruginosa
 Pseudomonas_aeruginosa <- colSums(df2[c(51086:53774),]) #select the rows with Pseudomonas aeruginosa
 
-#Tremponema
-Tremponema <- colSums(df2[c(53775:54376),]) #select the rows with Tremponema
+#Treponema
+Treponema <- colSums(df2[c(53775:54376),]) #select the rows with Treponema
 
 #Vibrio cholerae
 Vibrio_cholerae <- colSums(df2[c(54377:56040),]) #select the rows with Vibrio cholerae
@@ -57,10 +57,10 @@ Vibrio_cholerae <- colSums(df2[c(54377:56040),]) #select the rows with Vibrio ch
 Vibrio_parahaemolyticus <- colSums(df2[c(56041:57932),]) #select the rows with Vibrio parahaemolyticus
 
 #create dataframe
-df3<-rbind(Bordetella, Borellia, Brucella, Burkholderia_cepacia, Burkholderia_pseudomallei, 
+df3<-rbind(Bordetella, Borrelia, Brucella, Burkholderia_cepacia, Burkholderia_pseudomallei, 
            Chlamydiales, Dichelobacter_nosodus, Glaesserella, Haemophilus_influenzae, 
            Helicobacter_pylori, Leptospira, Neisseria, Pseudomonas_aeruginosa, 
-           Tremponema, Vibrio_cholerae, Vibrio_parahaemolyticus)
+           Treponema, Vibrio_cholerae, Vibrio_parahaemolyticus)
 df3<-as.data.frame(df3)
 df3[df3>0]<-1
 
