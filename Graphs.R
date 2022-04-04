@@ -1,6 +1,6 @@
 #packages
 library(dplyr)
-library(ggplot2)
+library(tidyverse)
 
 #Import database
 setwd("C:/Users/jessica/OneDrive - University of Bath/Bioinformatics/Sam/Assessment 2/")
@@ -24,6 +24,9 @@ ggplot(data=df3, aes(x=year, y=Abx)) +
   ylab("Level of Antibiotics Resistance / %") +
   geom_point() + #add points to graph
   geom_smooth(method=lm) #add trendline
+
+#get R^2 value
+summary(lm(Abx~year, data=df3))
 
 ###################################################################################
 
