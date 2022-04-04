@@ -22,7 +22,7 @@ d <- d%>%
   mutate(amino = sum(c_across(18:283))) #18:283 to select the columns with aminoglycosides
 d$amino[d$amino>0]<-1
 
-#Betalactamics
+#Betalactams
 d <- d%>%
   rowwise() %>%
   mutate(betalactamics = sum(c_across(284:2293)))
