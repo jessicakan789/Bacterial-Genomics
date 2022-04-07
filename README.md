@@ -12,7 +12,7 @@ Property of the University of Bath
 
 ## Gram-negative oxidase-positive bacterial genomes and number of isolates used in this study
 |Bacterial species |	Number of isolates |
-| ------------- |-------------| 
+|-------------|-------------| 
 |Bordetella	|2085|
 |Borrelia	|104|
 |Brucella |	108|
