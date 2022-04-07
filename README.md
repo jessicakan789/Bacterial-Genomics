@@ -1,4 +1,4 @@
-# Identification of Trends in Antimicrobial Resistance Genes in Gram-Negative Oxidase-Positive Bacteria
+# Trends in Antimicrobial Resistance Genes of Gram-Negative Oxidase-Positive Bacteria
 
 ResFinder and Evolution code written by Biel Garcias Puigserver
 
