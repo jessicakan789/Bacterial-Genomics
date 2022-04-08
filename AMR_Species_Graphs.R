@@ -17,14 +17,14 @@ Burkholderia_cepacia_mean <- Burkholderia_cepacia_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year and get percentage - 17 Abx classes
 
 Burkholderia_cepacia_graphic <- ggplot(Burkholderia_cepacia_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Burkholderia cepacia") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,30) + 
   xlab("") + 
   ylab("")
 
@@ -34,12 +34,12 @@ Burkholderia_pseudomallei_mean <- Burkholderia_pseudomallei_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Burkholderia_pseudomallei_graphic <- ggplot(Burkholderia_pseudomallei_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Burkholderia pseudomallei") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -51,12 +51,12 @@ Bordetella_mean <- Bordetella_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Bordetella_graphic <- ggplot(Bordetella_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Bordetella") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -68,14 +68,14 @@ Borrelia_mean <- Borrelia_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Borrelia_graphic <- ggplot(Borrelia_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Borrelia") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,1) + 
   xlab("") + 
   ylab("")
 
@@ -85,14 +85,14 @@ Brucella_mean <- Brucella_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Brucella_graphic <- ggplot(Brucella_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Brucella") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,2) + 
   xlab("") + 
   ylab("")
 
@@ -102,12 +102,12 @@ Chlamydiales_mean <- Chlamydiales_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Chlamydiales_graphic <- ggplot(Chlamydiales_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Chlamydiales") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -119,14 +119,14 @@ Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Dichelobacter_nosodus_graphic <- ggplot(Dichelobacter_nosodus_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Dichelobacter nosodus") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,1) + 
   xlab("") + 
   ylab("")
 
@@ -136,14 +136,14 @@ Glaesserella_mean <- Glaesserella_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Glaesserella_graphic <- ggplot(Glaesserella_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Glaesserella") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,5) + 
   xlab("") + 
   ylab("")
 
@@ -153,12 +153,12 @@ Haemophilus_influenzae_mean <- Haemophilus_influenzae_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Haemophilus_influenzae_graphic <- ggplot(Haemophilus_influenzae_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Haemophilus influenzae") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -170,14 +170,14 @@ Helicobacter_pylori_mean <- Helicobacter_pylori_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Helicobacter_pylori_graphic <- ggplot(Helicobacter_pylori_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Helicobacter pylori") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,1) + 
   xlab("") + 
   ylab("")
 
@@ -187,14 +187,14 @@ Leptospira_mean <- Leptospira_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Leptospira_graphic <- ggplot(Leptospira_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Leptospira") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,2) + 
   xlab("") + 
   ylab("")
 
@@ -204,12 +204,12 @@ Neisseria_mean <- Neisseria_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Neisseria_graphic <- ggplot(Neisseria_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Neisseria") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -221,14 +221,14 @@ Pseudomonas_aeruginosa_mean <- Pseudomonas_aeruginosa_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Pseudomonas_aeruginosa_graphic <- ggplot(Pseudomonas_aeruginosa_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Pseudomonas aeruginosa") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,50) + 
   xlab("") + 
   ylab("")
 
@@ -238,14 +238,14 @@ Treponema_mean <- Treponema_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Treponema_graphic <- ggplot(Treponema_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Treponema") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,1) + 
   xlab("") + 
   ylab("")
 
@@ -255,14 +255,14 @@ Vibrio_cholerae_mean <- Vibrio_cholerae_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Vibrio_cholerae_graphic <- ggplot(Vibrio_cholerae_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Vibrio cholerae") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,30) + 
   xlab("") + 
   ylab("")
 
@@ -272,14 +272,14 @@ Vibrio_parahaemolyticus_mean <- Vibrio_parahaemolyticus_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
-  summarise(mean=mean(total)) # find mean of AMR by year
+  summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
 Vibrio_parahaemolyticus_graphic <- ggplot(Vibrio_parahaemolyticus_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Vibrio parahaemolyticus") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
-  ylim(0,10) + 
+  ylim(0,20) + 
   xlab("") + 
   ylab("")
 
@@ -294,21 +294,10 @@ AMRclassestime <- ggarrange(Bordetella_graphic, Borrelia_graphic, Brucella_graph
                             Vibrio_parahaemolyticus_graphic)
 
 #Adding the title and the axis
-annotate_figure(AMRclassestime, top=text_grob("Evolution of Gram-negative oxidase-positive bacteria AMR over time"), 
-                bottom=text_grob("Year"), left = text_grob("Percentage of resistance",rot = 90, vjust = 1))
+annotate_figure(AMRclassestime, 
+                #top=text_grob("Evolution of Gram-negative oxidase-positive bacteria AMR over time"), 
+                bottom=text_grob("Year"), 
+                left = text_grob("Level of resistance / %",rot = 90, vjust = 1))
 
-#Number of AMR classes
-nummean <- df %>%
-  group_by(year)%>%     
-  summarise(mean=mean(numclass, na.rm=T, exclude.NA=T))
-
-numgraphic <- ggplot(nummean, aes(year,mean)) + 
-  geom_point() + 
-  geom_smooth() + 
-  ggtitle("Number of AMR classes") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5)) + 
-  xlab("") + 
-  ylab("") + 
-  ylim(0,13)
 
 
