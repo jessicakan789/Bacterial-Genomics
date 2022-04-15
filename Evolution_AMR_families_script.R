@@ -1,4 +1,4 @@
-# Evolution of AMR across time for every AMR class
+# Evolution of AMR across time for every antimicrobial class
 
 # Install packages
 library(ggplot2)
