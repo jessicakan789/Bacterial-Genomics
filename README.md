@@ -10,6 +10,9 @@ Supervisors: Prof Samuel Sheppard, Billy Monteith, Evangelos Mourkas, and Dr Ben
 
 Property of the University of Bath
 
+## Abstract
+Bacterial antimicrobial resistance (AMR) is increasing concern. AMR occurs due to random mutations and can be acquired through transmissible plasmids. Selective pressures, such as overuse in farming, increase the rate of AMR. This study analysed trends in AMR for 16 Gram-negative oxidase-positive bacteria where an overall increase of AMR was found. Out of the 17 antimicrobial classes investigated, beta-lactams had the highest resistance. Also, Pseudomonas aeruginosa had the widest range of resistance across antimicrobial classes. The continent and country with the highest percentage of AMR was Asia and Uzbekistan, respectively. Additionally, environmental sources had the highest percentage of AMR. Overall, Gram-negative oxidase-positive AMR is increasing, and new antibiotics may be required to tackle this problem in future.
+
 ## Gram-negative oxidase-positive bacterial genomes and number of isolates used in this study
 |Bacterial species |	Number of isolates |
 |-------------|-------------| 
