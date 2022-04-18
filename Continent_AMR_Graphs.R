@@ -22,11 +22,14 @@ Burkholderia_cepacia_mean <- Burkholderia_cepacia_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent and get percentage - 17 Abx classes
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Burkholderia_cepacia_mean <- Burkholderia_cepacia_mean[-1,] # Get rid of unspecified row
 
-Burkholderia_cepacia_graphic <- ggplot(Burkholderia_cepacia_mean, aes(x=continent, y=mean, fill=continent)) +
+Burkholderia_cepacia_mean <- Burkholderia_cepacia_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Burkholderia_cepacia_graphic <- ggplot(Burkholderia_cepacia_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -43,11 +46,14 @@ Burkholderia_pseudomallei_mean <- Burkholderia_pseudomallei_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Burkholderia_pseudomallei_mean <- Burkholderia_pseudomallei_mean[-1,] # Get rid of unspecified row
 
-Burkholderia_pseudomallei_graphic <- ggplot(Burkholderia_pseudomallei_mean, aes(x=continent, y=mean, fill=continent)) +
+Burkholderia_pseudomallei_mean <- Burkholderia_pseudomallei_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Burkholderia_pseudomallei_graphic <- ggplot(Burkholderia_pseudomallei_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -64,11 +70,14 @@ Bordetella_mean <- Bordetella_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Bordetella_mean <- Bordetella_mean[-1,] # Get rid of unspecified row
 
-Bordetella_graphic <- ggplot(Bordetella_mean, aes(x=continent, y=mean, fill=continent)) +
+Bordetella_mean <- Bordetella_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Bordetella_graphic <- ggplot(Bordetella_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -85,11 +94,14 @@ Borrelia_mean <- Borrelia_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Borrelia_mean <- Borrelia_mean[-1,] # Get rid of unspecified row
 
-Borrelia_graphic <- ggplot(Borrelia_mean, aes(x=continent, y=mean, fill=continent)) +
+Borrelia_mean <- Borrelia_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Borrelia_graphic <- ggplot(Borrelia_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -106,11 +118,14 @@ Brucella_mean <- Brucella_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Brucella_mean <- Brucella_mean[-1,] # Get rid of unspecified row
 
-Brucella_graphic <- ggplot(Brucella_mean, aes(x=continent, y=mean, fill=continent)) +
+Brucella_mean <- Brucella_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Brucella_graphic <- ggplot(Brucella_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -127,11 +142,14 @@ Chlamydiales_mean <- Chlamydiales_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Chlamydiales_mean <- Chlamydiales_mean[-1,] # Get rid of unspecified row
 
-Chlamydiales_graphic <- ggplot(Chlamydiales_mean, aes(x=continent, y=mean, fill=continent)) +
+Chlamydiales_mean <- Chlamydiales_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Chlamydiales_graphic <- ggplot(Chlamydiales_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -148,11 +166,14 @@ Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean[-1,] # Get rid of unspecified row
 
-Dichelobacter_nosodus_graphic <- ggplot(Dichelobacter_nosodus_mean, aes(x=continent, y=mean, fill=continent)) +
+Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Dichelobacter_nosodus_graphic <- ggplot(Dichelobacter_nosodus_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -169,11 +190,14 @@ Glaesserella_mean <- Glaesserella_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Glaesserella_mean <- Glaesserella_mean[-1,] # Get rid of unspecified row
 
-Glaesserella_graphic <- ggplot(Glaesserella_mean, aes(x=continent, y=mean, fill=continent)) +
+Glaesserella_mean <- Glaesserella_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Glaesserella_graphic <- ggplot(Glaesserella_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -190,11 +214,14 @@ Haemophilus_influenzae_mean <- Haemophilus_influenzae_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Haemophilus_influenzae_mean <- Haemophilus_influenzae_mean[-1,] # Get rid of unspecified row
 
-Haemophilus_influenzae_graphic <- ggplot(Haemophilus_influenzae_mean, aes(x=continent, y=mean, fill=continent)) +
+Haemophilus_influenzae_mean <- Haemophilus_influenzae_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Haemophilus_influenzae_graphic <- ggplot(Haemophilus_influenzae_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -211,11 +238,14 @@ Helicobacter_pylori_mean <- Helicobacter_pylori_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Helicobacter_pylori_mean <- Helicobacter_pylori_mean[-1,] # Get rid of unspecified row
 
-Helicobacter_pylori_graphic <- ggplot(Helicobacter_pylori_mean, aes(x=continent, y=mean, fill=continent)) +
+Helicobacter_pylori_mean <- Helicobacter_pylori_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Helicobacter_pylori_graphic <- ggplot(Helicobacter_pylori_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -232,11 +262,14 @@ Leptospira_mean <- Leptospira_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Leptospira_mean <- Leptospira_mean[-1,] # Get rid of unspecified row
 
-Leptospira_graphic <- ggplot(Leptospira_mean, aes(x=continent, y=mean, fill=continent)) +
+Leptospira_mean <- Leptospira_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Leptospira_graphic <- ggplot(Leptospira_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -253,11 +286,14 @@ Neisseria_mean <- Neisseria_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Neisseria_mean <- Neisseria_mean[-1,] # Get rid of unspecified row
 
-Neisseria_graphic <- ggplot(Neisseria_mean, aes(x=continent, y=mean, fill=continent)) +
+Neisseria_mean <- Neisseria_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Neisseria_graphic <- ggplot(Neisseria_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -274,11 +310,14 @@ Pseudomonas_aeruginosa_mean <- Pseudomonas_aeruginosa_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Pseudomonas_aeruginosa_mean <- Pseudomonas_aeruginosa_mean[-1,] # Get rid of unspecified row
 
-Pseudomonas_aeruginosa_graphic <- ggplot(Pseudomonas_aeruginosa_mean, aes(x=continent, y=mean, fill=continent)) +
+Pseudomonas_aeruginosa_mean <- Pseudomonas_aeruginosa_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Pseudomonas_aeruginosa_graphic <- ggplot(Pseudomonas_aeruginosa_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -295,11 +334,14 @@ Treponema_mean <- Treponema_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Treponema_mean <- Treponema_mean[-1,] # Get rid of unspecified row
 
-Treponema_graphic <- ggplot(Treponema_mean, aes(x=continent, y=mean, fill=continent)) +
+Treponema_mean <- Treponema_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Treponema_graphic <- ggplot(Treponema_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -316,11 +358,14 @@ Vibrio_cholerae_mean <- Vibrio_cholerae_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Vibrio_cholerae_mean <- Vibrio_cholerae_mean[-1,] # Get rid of unspecified row
 
-Vibrio_cholerae_graphic <- ggplot(Vibrio_cholerae_mean, aes(x=continent, y=mean, fill=continent)) +
+Vibrio_cholerae_mean <- Vibrio_cholerae_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Vibrio_cholerae_graphic <- ggplot(Vibrio_cholerae_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -337,11 +382,14 @@ Vibrio_parahaemolyticus_mean <- Vibrio_parahaemolyticus_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
-  summarise(mean=mean(total)/17*100) # find mean of AMR by continent
+  summarise(mean=mean(total)) # find mean of AMR by continent
 
 Vibrio_parahaemolyticus_mean <- Vibrio_parahaemolyticus_mean[-1,] # Get rid of unspecified row
 
-Vibrio_parahaemolyticus_graphic <- ggplot(Vibrio_parahaemolyticus_mean, aes(x=continent, y=mean, fill=continent)) +
+Vibrio_parahaemolyticus_mean <- Vibrio_parahaemolyticus_mean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+Vibrio_parahaemolyticus_graphic <- ggplot(Vibrio_parahaemolyticus_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -381,7 +429,10 @@ aminomean <- df %>%
 
 aminomean <- aminomean[-1,] # Get rid of unspecified row
 
-aminographic <- ggplot(aminomean, aes(x=continent, y=mean, fill=continent)) +
+aminomean <- aminomean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+aminographic <- ggplot(aminomean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -399,7 +450,10 @@ betamean <- df %>%
 
 betamean <- betamean[-1,] # Get rid of unspecified row
 
-betagraphic <- ggplot(betamean, aes(x=continent, y=mean, fill=continent)) +
+betamean <- betamean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+betagraphic <- ggplot(betamean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -417,7 +471,10 @@ colistinmean <- df %>%
 
 colistinmean <- colistinmean[-1,] # Get rid of unspecified row
 
-colistingraphic <- ggplot(colistinmean, aes(x=continent, y=mean, fill=continent)) +
+colistinmean <- colistinmean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+colistingraphic <- ggplot(colistinmean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -435,7 +492,10 @@ disinfectantmean <- df %>%
 
 disinfectantmean <- disinfectantmean[-1,] # Get rid of unspecified row
 
-disinfectantgraphic <- ggplot(disinfectantmean, aes(x=continent, y=mean, fill=continent)) +
+disinfectantmean <- disinfectantmean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+disinfectantgraphic <- ggplot(disinfectantmean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -453,7 +513,10 @@ fosfomean <- df %>%
 
 fosfomean <- fosfomean[-1,] # Get rid of unspecified row
 
-fosfographic <- ggplot(fosfomean, aes(x=continent, y=mean, fill=continent)) +
+fosfomean <- fosfomean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+fosfographic <- ggplot(fosfomean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -471,7 +534,10 @@ fusidicmean <- df %>%
 
 fusidicmean <- fusidicmean[-1,] # Get rid of unspecified row
 
-fusidicgraphic <- ggplot(fusidicmean, aes(x=continent, y=mean, fill=continent)) +
+fusidicmean <- fusidicmean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+fusidicgraphic <- ggplot(fusidicmean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -489,7 +555,10 @@ glycomean <- df %>%
 
 glycomean <- glycomean[-1,] # Get rid of unspecified row
 
-glycographic <- ggplot(glycomean, aes(x=continent, y=mean, fill=continent)) +
+glycomean <- glycomean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+glycographic <- ggplot(glycomean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -507,7 +576,10 @@ macromean <- df %>%
 
 macromean <- macromean[-1,] # Get rid of unspecified row
 
-macrographic <- ggplot(macromean, aes(x=continent, y=mean, fill=continent)) +
+macromean <- macromean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+macrographic <- ggplot(macromean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -525,7 +597,10 @@ nitromean <- df %>%
 
 nitromean <- nitromean[-1,] # Get rid of unspecified row
 
-nitrographic <- ggplot(nitromean, aes(x=continent, y=mean, fill=continent)) +
+nitromean <- nitromean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+nitrographic <- ggplot(nitromean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -543,7 +618,10 @@ oxazmean <- df %>%
 
 oxazmean <- oxazmean[-1,] # Get rid of unspecified row
 
-oxazgraphic <- ggplot(oxazmean, aes(x=continent, y=mean, fill=continent)) +
+oxazmean <- oxazmean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+oxazgraphic <- ggplot(oxazmean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -561,7 +639,10 @@ phemean <- df %>%
 
 phemean <- phemean[-1,] # Get rid of unspecified row
 
-phegraphic <- ggplot(phemean, aes(x=continent, y=mean, fill=continent)) +
+phemean <- phemean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+phegraphic <- ggplot(phemean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -579,7 +660,10 @@ pseudomean <- df %>%
 
 pseudomean <- pseudomean[-1,] # Get rid of unspecified row
 
-pseudographic <- ggplot(pseudomean, aes(x=continent, y=mean, fill=continent)) +
+pseudomean <- pseudomean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+pseudographic <- ggplot(pseudomean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -597,7 +681,10 @@ quinomean <- df %>%
 
 quinomean <- quinomean[-1,] # Get rid of unspecified row
 
-quinographic <- ggplot(quinomean, aes(x=continent, y=mean, fill=continent)) +
+quinomean <- quinomean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+quinographic <- ggplot(quinomean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -615,7 +702,10 @@ rifamean <- df %>%
 
 rifamean <- rifamean[-1,] # Get rid of unspecified row
 
-rifagraphic <- ggplot(rifamean, aes(x=continent, y=mean, fill=continent)) +
+rifamean <- rifamean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+rifagraphic <- ggplot(rifamean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -633,7 +723,10 @@ sulfamean <- df %>%
 
 sulfamean <- sulfamean[-1,] # Get rid of unspecified row
 
-sulfagraphic <- ggplot(sulfamean, aes(x=continent, y=mean, fill=continent)) +
+sulfamean <- sulfamean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+sulfagraphic <- ggplot(sulfamean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -651,7 +744,10 @@ tetmean <- df %>%
 
 tetmean <- tetmean[-1,] # Get rid of unspecified row
 
-tetgraphic <- ggplot(tetmean, aes(x=continent, y=mean, fill=continent)) +
+tetmean <- tetmean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+tetgraphic <- ggplot(tetmean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -669,7 +765,10 @@ trimean <- df %>%
 
 trimean <- trimean[-1,] # Get rid of unspecified row
 
-trigraphic <- ggplot(trimean, aes(x=continent, y=mean, fill=continent)) +
+trimean <- trimean %>% 
+  mutate(percentage=mean/sum(mean)*100) # convert to percentage
+
+trigraphic <- ggplot(trimean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot

@@ -190,15 +190,19 @@ ggplot(df5, aes(year, value, colour = series)) +
 df6 <- df2[,c(6,35)]
 df6 <- df6 %>%
   group_by(continent) %>%
-  summarize(AMR=mean(total)/17*100)
+  summarize(AMR=mean(total))
 
 df6 <- df6[c(2:7),] # drop unspecified column
 
+df6 <- df6 %>%
+  mutate(percentage=AMR/sum(AMR)*100)
+
 #Plot bar graph
-ggplot(df6, aes(x=continent, y=AMR, fill=continent)) +
+ggplot(df6, aes(x=continent, y=percentage, fill=continent)) +
   xlab("Continent") +
   ylab("Level of Antibiotics Resistance / %") +
-  geom_bar(stat="identity")
+  geom_bar(stat="identity") +
+  theme(legend.position="none")
 
 ###################################################################################
 
@@ -208,15 +212,19 @@ ggplot(df6, aes(x=continent, y=AMR, fill=continent)) +
 df7 <- df2[,c(11,35)]
 df7 <- df7 %>%
   group_by(source) %>%
-  summarize(AMR=mean(total)/17*100)
+  summarize(AMR=mean(total))
 
 df7 <- df7[c(2:6),] # drop unspecified row
 
+df7 <- df7 %>%
+  mutate(percentage=AMR/sum(AMR)*100)
+
 #Plot bar graph
-ggplot(df7, aes(x=source, y=AMR, fill=source)) +
-  xlab("Host") +
+ggplot(df7, aes(x=source, y=percentage, fill=source)) +
+  xlab("Source") +
   ylab("Level of Antibiotics Resistance / %") +
-  geom_bar(stat="identity")
+  geom_bar(stat="identity") +
+  theme(legend.position="none")
 
 #################################################################################
 
