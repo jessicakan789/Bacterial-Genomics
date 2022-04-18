@@ -113,17 +113,17 @@ Chlamydiales_graphic <- ggplot(Chlamydiales_mean, aes(year,mean)) +
   xlab("") + 
   ylab("")
 
-# Dichelobacter_nosodus
-Dichelobacter_nosodus_mean <- df[c(5251:5423),]
-Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean %>%
+# Dichelobacter_nodosus
+Dichelobacter_nodosus_mean <- df[c(5251:5423),]
+Dichelobacter_nodosus_mean <- Dichelobacter_nodosus_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(year) %>%
   summarise(mean=mean(total)/17*100) # find mean of AMR by year
 
-Dichelobacter_nosodus_graphic <- ggplot(Dichelobacter_nosodus_mean, aes(year,mean)) + 
+Dichelobacter_nodosus_graphic <- ggplot(Dichelobacter_nodosus_mean, aes(year,mean)) + 
   geom_point() + 
-  ggtitle("Dichelobacter nosodus") + 
+  ggtitle("Dichelobacter nodosus") + 
   theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,1) + 
@@ -140,7 +140,7 @@ Glaesserella_mean <- Glaesserella_mean %>%
 
 Glaesserella_graphic <- ggplot(Glaesserella_mean, aes(year,mean)) + 
   geom_point() + 
-  ggtitle("Glaesserella") + 
+  ggtitle("Glaesserella parasuis") + 
   theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,5) + 
@@ -242,7 +242,7 @@ Treponema_mean <- Treponema_mean %>%
 
 Treponema_graphic <- ggplot(Treponema_mean, aes(year,mean)) + 
   geom_point() + 
-  ggtitle("Treponema") + 
+  ggtitle("Treponema pallidum") + 
   theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
   geom_smooth() + 
   ylim(0,1) + 
@@ -286,7 +286,7 @@ Vibrio_parahaemolyticus_graphic <- ggplot(Vibrio_parahaemolyticus_mean, aes(year
 #Joining the graphs
 AMRclassestime <- ggarrange(Bordetella_graphic, Borrelia_graphic, Brucella_graphic, 
                             Burkholderia_cepacia_graphic, Burkholderia_pseudomallei_graphic, 
-                            Chlamydiales_graphic, Dichelobacter_nosodus_graphic, 
+                            Chlamydiales_graphic, Dichelobacter_nodosus_graphic, 
                             Glaesserella_graphic, Haemophilus_influenzae_graphic, 
                             Helicobacter_pylori_graphic, Leptospira_graphic, 
                             Neisseria_graphic, Pseudomonas_aeruginosa_graphic, 

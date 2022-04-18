@@ -160,20 +160,20 @@ Chlamydiales_graphic <- ggplot(Chlamydiales_mean, aes(x=continent, y=percentage,
         plot.title=element_text(hjust=0.6, vjust=0.5, size=10)) +
   ggtitle("Chlamydiales")
 
-# Dichelobacter_nosodus
-Dichelobacter_nosodus_mean <- df[c(5251:5423),]
-Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean %>%
+# Dichelobacter_nodosus
+Dichelobacter_nodosus_mean <- df[c(5251:5423),]
+Dichelobacter_nodosus_mean <- Dichelobacter_nodosus_mean %>%
   rowwise() %>%
   mutate(total = sum(c_across(18:34))) %>% # add column total which sums up AMR
   group_by(continent) %>%
   summarise(mean=mean(total)) # find mean of AMR by continent
 
-Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean[-1,] # Get rid of unspecified row
+Dichelobacter_nodosus_mean <- Dichelobacter_nodosus_mean[-1,] # Get rid of unspecified row
 
-Dichelobacter_nosodus_mean <- Dichelobacter_nosodus_mean %>% 
+Dichelobacter_nodosus_mean <- Dichelobacter_nodosus_mean %>% 
   mutate(percentage=mean/sum(mean)*100) # convert to percentage
 
-Dichelobacter_nosodus_graphic <- ggplot(Dichelobacter_nosodus_mean, aes(x=continent, y=percentage, fill=continent)) +
+Dichelobacter_nodosus_graphic <- ggplot(Dichelobacter_nodosus_mean, aes(x=continent, y=percentage, fill=continent)) +
   xlab("") +
   ylab("") +
   geom_bar(stat="identity") + # bar plot
@@ -182,7 +182,7 @@ Dichelobacter_nosodus_graphic <- ggplot(Dichelobacter_nosodus_mean, aes(x=contin
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank(),
         plot.title=element_text(hjust=0.6, vjust=0.5, size=10)) +
-  ggtitle("Dichelobacter nosodus")
+  ggtitle("Dichelobacter nodosus")
 
 # Glaesserella
 Glaesserella_mean <- df[c(5424:5712),]
@@ -206,7 +206,7 @@ Glaesserella_graphic <- ggplot(Glaesserella_mean, aes(x=continent, y=percentage,
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank(),
         plot.title=element_text(hjust=0.6, vjust=0.5, size=10)) +
-  ggtitle("Glaesserella")
+  ggtitle("Glaesserella parasuis")
 
 # Haemophilus_influenzae
 Haemophilus_influenzae_mean <- df[c(5713:8344),]
@@ -350,7 +350,7 @@ Treponema_graphic <- ggplot(Treponema_mean, aes(x=continent, y=percentage, fill=
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank(),
         plot.title=element_text(hjust=0.6, vjust=0.5, size=10)) +
-  ggtitle("Treponema") 
+  ggtitle("Treponema pallidum") 
 
 # Vibrio_cholerae
 Vibrio_cholerae_mean <- df[c(54377:56040),]
@@ -403,7 +403,7 @@ Vibrio_parahaemolyticus_graphic <- ggplot(Vibrio_parahaemolyticus_mean, aes(x=co
 #Joining the graphs
 Continent_AMR_Species <- ggarrange(Bordetella_graphic, Borrelia_graphic, Brucella_graphic, 
                             Burkholderia_cepacia_graphic, Burkholderia_pseudomallei_graphic, 
-                            Chlamydiales_graphic, Dichelobacter_nosodus_graphic, 
+                            Chlamydiales_graphic, Dichelobacter_nodosus_graphic, 
                             Glaesserella_graphic, Haemophilus_influenzae_graphic, 
                             Helicobacter_pylori_graphic, Leptospira_graphic, 
                             Neisseria_graphic, Pseudomonas_aeruginosa_graphic, 
