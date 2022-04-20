@@ -22,7 +22,7 @@ Burkholderia_cepacia_mean <- Burkholderia_cepacia_mean %>%
 Burkholderia_cepacia_graphic <- ggplot(Burkholderia_cepacia_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Burkholderia cepacia") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,30) + 
   xlab("") + 
@@ -39,7 +39,7 @@ Burkholderia_pseudomallei_mean <- Burkholderia_pseudomallei_mean %>%
 Burkholderia_pseudomallei_graphic <- ggplot(Burkholderia_pseudomallei_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Burkholderia pseudomallei") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -56,7 +56,7 @@ Bordetella_mean <- Bordetella_mean %>%
 Bordetella_graphic <- ggplot(Bordetella_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Bordetella") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -73,7 +73,7 @@ Borrelia_mean <- Borrelia_mean %>%
 Borrelia_graphic <- ggplot(Borrelia_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Borrelia") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,1) + 
   xlab("") + 
@@ -90,7 +90,7 @@ Brucella_mean <- Brucella_mean %>%
 Brucella_graphic <- ggplot(Brucella_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Brucella") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,2) + 
   xlab("") + 
@@ -107,7 +107,7 @@ Chlamydiales_mean <- Chlamydiales_mean %>%
 Chlamydiales_graphic <- ggplot(Chlamydiales_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Chlamydiales") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -124,7 +124,7 @@ Dichelobacter_nodosus_mean <- Dichelobacter_nodosus_mean %>%
 Dichelobacter_nodosus_graphic <- ggplot(Dichelobacter_nodosus_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Dichelobacter nodosus") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,1) + 
   xlab("") + 
@@ -141,7 +141,7 @@ Glaesserella_mean <- Glaesserella_mean %>%
 Glaesserella_graphic <- ggplot(Glaesserella_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Glaesserella parasuis") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,5) + 
   xlab("") + 
@@ -158,7 +158,7 @@ Haemophilus_influenzae_mean <- Haemophilus_influenzae_mean %>%
 Haemophilus_influenzae_graphic <- ggplot(Haemophilus_influenzae_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Haemophilus influenzae") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -175,7 +175,7 @@ Helicobacter_pylori_mean <- Helicobacter_pylori_mean %>%
 Helicobacter_pylori_graphic <- ggplot(Helicobacter_pylori_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Helicobacter pylori") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,1) + 
   xlab("") + 
@@ -192,7 +192,7 @@ Leptospira_mean <- Leptospira_mean %>%
 Leptospira_graphic <- ggplot(Leptospira_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Leptospira") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,2) + 
   xlab("") + 
@@ -209,7 +209,7 @@ Neisseria_mean <- Neisseria_mean %>%
 Neisseria_graphic <- ggplot(Neisseria_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Neisseria") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,10) + 
   xlab("") + 
@@ -226,7 +226,7 @@ Pseudomonas_aeruginosa_mean <- Pseudomonas_aeruginosa_mean %>%
 Pseudomonas_aeruginosa_graphic <- ggplot(Pseudomonas_aeruginosa_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Pseudomonas aeruginosa") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,50) + 
   xlab("") + 
@@ -243,7 +243,7 @@ Treponema_mean <- Treponema_mean %>%
 Treponema_graphic <- ggplot(Treponema_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Treponema pallidum") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,1) + 
   xlab("") + 
@@ -260,7 +260,7 @@ Vibrio_cholerae_mean <- Vibrio_cholerae_mean %>%
 Vibrio_cholerae_graphic <- ggplot(Vibrio_cholerae_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Vibrio cholerae") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,30) + 
   xlab("") + 
@@ -277,7 +277,7 @@ Vibrio_parahaemolyticus_mean <- Vibrio_parahaemolyticus_mean %>%
 Vibrio_parahaemolyticus_graphic <- ggplot(Vibrio_parahaemolyticus_mean, aes(year,mean)) + 
   geom_point() + 
   ggtitle("Vibrio parahaemolyticus") + 
-  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=12)) + 
+  theme(plot.title=element_text( hjust=0.5, vjust=0.5, size=10)) + 
   geom_smooth() + 
   ylim(0,20) + 
   xlab("") + 
